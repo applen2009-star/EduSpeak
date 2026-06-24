@@ -1,71 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="az">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduSpeak - Educational Speaking Platform</title>
+    <title>EduSpeak - Master English</title>
+    <meta name="description" content="Learn English anytime, anywhere with professional teachers">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <div class="logo">
-                    <h1>🎤 EduSpeak</h1>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
+
+    <!-- ======== NAVBAR ======== -->
+    <nav class="navbar" id="navbar">
+        <div class="logo">EduSpeak</div>
+        <a href="#contact-form" class="cta-btn">CTA - Start Learning</a>
+    </nav>
+
+    <!-- ======== HERO SECTION ======== -->
+    <header class="hero" id="hero">
+        <h1 class="hero-title">Master English with EduSpeak</h1>
+        <p class="hero-text">Learn English anytime, anywhere with professional teachers</p>
+        <a href="#contact-form" class="hero-btn" id="heroStartBtn">Start Learning</a>
     </header>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="container">
-                <h2>Welcome to EduSpeak</h2>
-                <p>Master the art of public speaking and educational presentations</p>
-                <button class="cta-button">Get Started</button>
+    <!-- ======== WHY CHOOSE US ======== -->
+    <section class="features-section" id="features">
+        <h2 class="section-title">"Why Choose Us?"</h2>
+        <div class="cards-container">
+            <div class="card" data-feature="tutors">
+                <span class="card-icon">🎓</span>
+                <span class="card-text">Expert Tutors</span>
+                <span class="card-desc">Certified teachers with 5+ years experience</span>
             </div>
-        </section>
-
-        <section id="features" class="features">
-            <div class="container">
-                <h2>Features</h2>
-                <div class="feature-grid">
-                    <div class="feature-card">
-                        <h3>📚 Learn</h3>
-                        <p>Access comprehensive guides and resources for improving your speaking skills.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>🎯 Practice</h3>
-                        <p>Practice your presentations with interactive exercises and feedback.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>📊 Track Progress</h3>
-                        <p>Monitor your improvement with detailed analytics and performance metrics.</p>
-                    </div>
-                </div>
+            <div class="card" data-feature="schedule">
+                <span class="card-icon">📅</span>
+                <span class="card-text">Flexible Schedule</span>
+                <span class="card-desc">24/7 access to lessons, learn at your pace</span>
             </div>
-        </section>
-
-        <section id="about" class="about">
-            <div class="container">
-                <h2>About EduSpeak</h2>
-                <p>EduSpeak is a comprehensive platform designed to help educators and students develop their public speaking and presentation skills through interactive learning and practice.</p>
+            <div class="card" data-feature="clubs">
+                <span class="card-icon">💬</span>
+                <span class="card-text">Live Practice Clubs</span>
+                <span class="card-desc">Real conversations with native speakers</span>
             </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 EduSpeak. All rights reserved.</p>
-            <p id="contact">Contact: info@eduspeak.com</p>
         </div>
+    </section>
+
+    <!-- ======== CONTACT SECTION (FOOTER) ======== -->
+    <footer class="contact-section" id="contact-form">
+        <div class="contact-wrapper">
+            <h3 class="contact-title">📩 Join Our Community</h3>
+            <p class="contact-subtitle">Get weekly tips, free lessons, and exclusive content!</p>
+            
+            <form class="contact-container" id="subscribeForm" novalidate>
+                <div class="input-group">
+                    <input type="email" class="email-input" id="emailInput" placeholder="Enter your email..." required>
+                    <span class="input-error" id="emailError">⚠️ Please enter a valid email</span>
+                </div>
+                <button type="submit" class="join-btn" id="joinBtn">Join Now</button>
+            </form>
+            
+            <div id="successMessage" class="success-message hidden">
+                ✅ Thank you! You've joined the EduSpeak community!
+                <span class="success-emoji">🎉</span>
+            </div>
+        </div>
+        
+        <a href="#navbar" class="back-to-top" id="backToTopBtn">
+            ↑ Back to Top
+        </a>
     </footer>
+
+    <!-- Success Notification Toast -->
+    <div id="toastNotification" class="toast hidden"></div>
 
     <script src="script.js"></script>
 </body>
